@@ -9,7 +9,7 @@
 #define OUT2 4
 
 int state[2] = {};
-int touch_thresh = 100;
+int touch_thresh = 40;
 int touch_in = 0;
 int out = 0;
 
@@ -41,6 +41,7 @@ void loop() {
 		digitalWrite(OUT2, 0);
 		digitalWrite(OUT1, out);
 		digitalWrite(OUT2, out ^ 1);
+		delay(250);
 	}
 	serOut("\r\n");
 	delay(2);

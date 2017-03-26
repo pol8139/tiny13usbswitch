@@ -16,7 +16,7 @@ long tinyCapSensor(int send, int receive) {
 			sensed_value++;
 		}
 		if(sensed_value >= TIMEOUT) {
-			return 1;
+			return -1;
 		}
 		PORTB &= ~_BV(send);
 		sensed_total += sensed_value;
